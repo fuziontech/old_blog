@@ -23,13 +23,14 @@ email: fuziontech@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Adventures in Data, Machine Learning, and Infrastructure 
 baseurl: "/blog" # the subpath of your site, e.g. /blog
-domain: fuziontech.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://fuziontech.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+# domain: fuziontech.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+# url: https://fuziontech.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+url: "" # the base hostname and protocol for your site, e.g. http://example.com
 twitter_username: fuziontech 
 github_username:  fuziontech 
 
 # Build settings
-theme: jekyll-theme-cayman
+theme: minima 
 plugins:
   - jekyll-feed
 
