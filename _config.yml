@@ -22,7 +22,7 @@ title: State of the Union
 email: fuziontech@gmail.com 
 description: >- # this means to ignore newlines until "baseurl:"
   Adventures in Data, Machine Learning, and Infrastructure 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: fuziontech 
 github_username:  fuziontech 
