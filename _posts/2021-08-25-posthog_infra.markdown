@@ -1,7 +1,7 @@
---
+---
 layout: post
-title: "You wouldn't trust bad advice. Don't trust bad data!"
-date: 2020-11-17T00:21:42-08:00
+title: "Future PostHog Platform"
+date: 2021-08-25
 categories: data quality 
 draft: false 
 ---
