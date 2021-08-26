@@ -1,12 +1,12 @@
----
+--
 layout: post
-title: "What does the future of PostHog infrastructure look like?"
-date: 2021-08-25T
-categories: posthog infrastructure kubernetes clickhouse 
+title: "You wouldn't trust bad advice. Don't trust bad data!"
+date: 2020-11-17T00:21:42-08:00
+categories: data quality 
 draft: false 
 ---
 
-# What does the future of PostHog infrastructure look like?
+# What does the future PostHog Platform look like?
 
 **This is a rough outline of what I would build given unlimited resources currently.**
 
@@ -55,7 +55,7 @@ draft: false
          3. China
          4. Russia
          5. Asian Pacific
-4. **Shared infrastructure**
+4. **Shared infrastructure** - Cloud and on prem improvements
    1. Managing and migrating table schemas
       1. In order to iterate quickly we are going to need some way to manage the schemas and the migrations of the tables on ClickHouse. We do already have migrations in PostHog, but that's only for simple and fast migrations. This would have to be something more robust to support long running queries on ClickHouse. Something that might need to use `ClickHouse Copier`
    2. Object stores 
@@ -89,7 +89,7 @@ draft: false
          1. If ZK is a critical point of failure.
       7. ClickHouse Operator metrics
       8. Status of backups
-5. **Everything Migrations** - Moving to cloud and back
+5. **Beam me up! / Beam me down!** - Moving to cloud and back
    1. Some seamless way to migrate **everything** from cloud and back. This includes
       1. Action definitions
       2. Cohort definitions
@@ -119,29 +119,60 @@ draft: false
       2. Linear regression
       3. so much to do!
    4.  Triggering events/actions/alerts based on arbitrary rules
-9. **Platform Integrations** - More ways to onboard to PostHog. We should write as many docs as possible to help gain developer and product manager mindshare but the truth is the easier we make it to onboard to PostHog cloud from a place someone mine discover us the better.
-   1. [Vercel](https://vercel.com/integrations)
-   2. [Heroku](https://elements.heroku.com/addons#metrics-analytics)
-   3. [Netlify](https://docs.netlify.com/configure-builds/build-plugins/)
-10. **Data Engineering tools for PostHog.** *<- We have SREs applying with DE backgrounds. Perfect.*
+9.  **Stream Processing** - This piggy-backs on the last line item. If we build out the API needed for triggering events on arbitrary rules we can build out a stream processing pipeline.
+    1.  Triggering events/actions/alerts to external systems based on arbitrary rules, aggregates, predictions, outliers
+    2.  Consider building out [Distributed RPC](https://storm.apache.org/releases/current/Distributed-RPC.html) systems using plugins as a basis
+        1.  Hit this API and get a wholistic view of a user from PostHog, Hubspot, salesforce, and some internal API
+        2.  Submit a certain type of event and call a series of downstream RPC endpoints
+    3.  Build out better examples of building PostHog into core streaming data workflows in apps.
+10. **Platform Integrations** - More ways to onboard to PostHog. We should write as many docs as possible to help gain developer and product manager mindshare but the truth is the easier we make it to onboard to PostHog cloud from a place someone mine discover us the better.
+    1.  [Vercel](https://vercel.com/integrations)
+    2.  [Heroku](https://elements.heroku.com/addons#metrics-analytics)
+    3.  [Netlify](https://docs.netlify.com/configure-builds/build-plugins/)
+11. **Data Engineering tools for PostHog.** *<- We have SREs applying with DE backgrounds. Perfect.*
     1. We have talked about this earlier with plugin exports but this would be dedicated, opinionated examples on how to load data from things like:
-       1. Hive
-       2. Hadoop
-       3. Spark
-       4. Presto/Trino
-       5. Druid
-       6. Airflow
-       7. Snowflake
+       1. Hive - needs Java Client library as UDF
+       2. Hadoop - needs Java Client library
+       3. Spark - needs Java Client library
+       4. Presto/Trino - needs Java Client library as UDF
+       5. Druid - needs Java Client library
+       6. Airflow - Python ✅
+       7. Snowflake - Library TBD
        8. DBT (for modeling data into the correct schema)
-       9. Luigi
-       10. Snowplow
+       9. Luigi - Python ✅
+       10. Snowplow - Library TBD
+       11. S3 - Using a task orchestrator like Airflow/Luigi
     2. Solid documentation on:
        1. What the schema needs to be for Events and Persons (from Data Engineering Perspective)
        2. Updating person properties and attributes effectively
        3. Filling in event gaps by using your data warehouse
        4. Backfilling event data (rewriting events)
-11. **Pluggable backends** - Remember, unlimited funding. Make it possible to replace the backend of PostHog with a different OLAP database. I'm still betting my money on ClickHouse, but to land certain deals this would be a deal-making option.
+12. **Client Libraries** - We still have a few to build
+    1.  Java (We have Android!)
+    2.  Java UDFs for Data Warehouses
+    3.  C/C++ - Critical for IoT
+    4.  Rust
+    5.  C#
+    6.  Scala (using Java lib) - Just example and docs
+    7.  Clojure (using Java lib) - Just example and docs
+    8.  Kotlin (using Java lib) - Just example and docs
+13. **Pluggable backends** - Remember, unlimited funding. Make it possible to replace the backend of PostHog with a different OLAP database. I'm still betting my money on ClickHouse, but to land certain deals this would be a deal-making option.
     1.  Presto/Trino
     2.  Druid
     3.  Snowflake
     4.  BigQuery
+14. **ClickHouse Stewardship** - Contributing back to ClickHouse
+    1.  Help steer the roadmap for ClickHouse to better align with our long term goals.
+    2.  Speed up the development of features that are on the horizon that we need sooner than later
+        1.  Window functions
+        2.  Materialized Columns - force materialization
+        3.  Better resharding and schema mutations
+            1.  Change table engine in place
+            2.  Change sort by keys in place
+            3.  Change sample by key in place
+        4.  Bug fixes
+        5.  Performance improvements
+    3.  Improve generic tooling around ClickHouse
+        1.  ClickHouse Operator
+        2.  ClickHouse Copier
+        3.  ClickHouse Backup
