@@ -28,7 +28,7 @@ twitter_username: fuziontech
 github_username:  fuziontech 
 
 # Build settings
-theme: minima
+theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
 
