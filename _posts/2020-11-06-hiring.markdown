@@ -1,0 +1,143 @@
+---
+layout: post
+title: "How to hire only the best"
+date: 2020-11-06T21:20:22-08:00
+categories: hiring organizations interviews
+draft: false 
+---
+
+# Hiring is hard
+
+Hiring is very hard. Somehow you have to separate the wheat from the chaff while minimizing the cost of doing that on your team. The cost of a bad hire is super high. So you have to also maximize the likelihood that the hire will be a successful one. You also need to be respectful to the candidate and not waste their time. What is discussed here is specifically for an engineering hire, but could be adapted to any hire with a few modifications.
+
+Characteristics of a good hiring process:
+
+* Respectful of team's time
+* Respectful of the candidate's time
+* Determines the technical capabilities of the candidate
+* Gauge the experience of the candidate
+* Judge if the candidate is a good cultural fit
+* Is consistent while scaling
+* Correlates as closely as possible with day to day work performance
+
+
+## Fail fast
+
+#### Phone Screen
+
+The first thing to keep in mind is that your team's time is gold. It is the most precious resource any of us have and that applies to your everyone at your company as well. Your process needs to be able to filter out who is not a good fit as early as possible. The process should also be able to do that with the least touch possible from people on your team. This means your process must be built to fail fast.
+
+Some of the best processes that I've seen personally involve a technical phone screen that has just one person asking a generally basic question that estimates if the person is even in the realm of what you are looking for. It is a great spot to check, at least superficially, what the candidate has listed on their resume. They list that they have 10 years of ruby - do they know how to a relatively simple task in ruby? Better for you and the candidate to find out now with just their counterpart over zoom.
+
+#### Homework
+
+A solid alternative to the phone screen is homework. This gives you even more signal on whether or not the candidate is worth bringing onsite and spending effectively an engineering work day on. The main downside is that it can be a waste of time for the candidate if they turn out to not submit something that your team is keen on.
+
+Design your system with this as a key requirement. If your process can't fail fast you will end up spending a great deal of your team's time and leave a sour taste in the mouths of your candidates
+
+## Think Scale and Consistency
+
+Your system has to be able to scale, for a few reasons. You might need to grow your team rapidly because of some new opportunity. You may have several world class candidates show up at your doorstep that you want to get in the door quick. You maybe be huge and want to have a consistent experience for all teams to ensure consistent quality. It's important to build out your process with this in mind.
+
+Some places like to give homework. Others do a phone screen. Some have you do homework, bring it in, and talk about it during the onsite. A select few places contract you and work with you for a day or a week to establish just how it is to work with you. 
+
+So far this is what we have as a process:
+1. Technical Phone screen
+2. Onsite
+3. Debrief
+
+ You can ignore this advice for your founding team; for that you will want something as high touch as possible to make sure you are making the right hire and are able to close on the people who you believe will either make or break your organization.
+
+## The onsite
+
+So you've found someone who looks great on paper, and has passed the first hurtle of the technical phone screen or their homework looks great. Now it's time to bring them onsite to have the team meet and test them. You not only want to take this opportunity to test the candidate and for your team to meet and get an impression of them. You want to be able to use this time to sell the candidate on what you are doing, your mission, and paint a picture of where they would fit in your org.
+
+You want some representative chunk of the hiring team to meet the candidate and have the opportunity to interact and test them. If you follow Amazon's two-pizza rule on team size this shouldn't be too much of a problem between the interviews and some subset of the team going to lunch with the candidate. As for the interview sessions. Something that I have seen work very well is breaking the session down into about 3 technical chunks about an hour long.
+
+### Coding & Debugging
+
+In this session the interviewer will ask some relatively mundane task be complete with the goal being to see how the candidate breaks the problem down and attacks it. Where do they get stuck? How do they unstick themselves. I personally like to work somewhat collaboratively with the candidate to see where they ask for help. This is a great way to see if they will be someone who will get stuck and immediately defer to someone else or are they someone who will sit and spin their wheels forever. Ideally it's somewhere in between. Where the exact line is? That is for the interviewer to decide.
+
+I also like to see how the candidate captures the requirements of the problem. To date my favorite interview was where the candidate captured the requirements as a test suite and built out the solution against that. There was absolutely no questions after we first settled on the suite whether or not the solution accomplished the goal we set out with.
+
+### Systems Architecture
+
+Systems architecture was one of my favorite questions to ask as an interviewer mainly because there really is no limit to how deep you can go with the question. I always liked starting out by telling the candidate that I was some 'mom and pop shop' who needed just a solution that worked and was fast to build. Something that would be cheap. From there we would run the solution out until we were the size of Amazon or Apple. It was generally fun for both me and the candidate as we picked things apart and asked questions. It's a really great session to work collaboratively.
+
+More often than not you could identify what technologies people had used before because of their familiarity with where they fit in the grand scheme of things. I loved digging into both what they were comfortable with and with what they were not. With what they were comfortable with you really see where their experience would be a value add. With where they were not you could see how intuitive they were. It was a ton of fun. I think for most people this was their favorite session to participate in, on both sides
+
+### Algorithms
+
+Ah, algorithms. How often do you _actually_ use the things you are tested in day to day? In reality, almost never. However, I still think it's important to have a panel on this. The reason why I think it is still important is a combination of table stakes, and respect. Table stakes because this is one of the sessions I expect the candidate to study for. This shows me some level of preparation. The other is a respect for what is happening behind the scenes of a library. Honestly, who out there re-developes a sorting algorithm. Who has to write their own sorting algorithm or new way to build out a trie? Not many of us and not often. But asking this question gives you a good estimate of how the candidate thinks about efficiencies.
+
+Even if a candidate doesn't know how to give you the perfect solution, this is where you can probe to see if they have an intuition on where the slow part of their code might exist. This is also the section where you can see if, given a relatively tough objective, can they even get there. I never really penalized a candidate if they were able to get to the objective and were able to explain where things were slow. It was only extra points if they could rationalize how to make things faster and the tradeoffs of different solutions.
+
+### Lunch with team
+
+This one is crucial. The team has to have lunch with the candidate. If you are remote and can't have lunch in person, at least schedule some social time to just hang out with the candidate and ask the softer questions: What do you do for fun? How do you spend your free time. What sorts of hobbies are you into. This gives the candidate some time to relax and get out of test mode and also is a great way to see if they are someone who is a good culture fit for the team.
+
+Much overlooked, this is where you sell the candidate on your team as well. This where you want to make the candidate think, yeah I could work with these people every day. Talk about the future of the product, what you find interesting. Get them engaged. It's so important. The candidate will remember it when they are considering their options later.
+
+### Hiring manager
+
+So far things are looking good. Time to meet the hiring manager. Honestly this can happen at any time. Often times it can even be the first meeting of the day. What you will be looking to do during this is gauge how they are as a team member. How do they de-conflict at a crossroads? What are they looking for in their career? Do they have the experience and capacity to mentor more junior members of the team or will they need to be mentored.
+
+Most importantly, this is where the hiring manager will contextualize the position and why it is important to the organization. This is also where I would expect the candidate to ask about more procedural things like, are there sprints? How are they run? Are product requirements purely top down or is it a bottoms up product development cycle?
+
+I generally also probe their resume and ask about previous projects. What went well? What didn't go so well? See if they can be honest about learning and iterating.
+
+### Bar Raiser
+
+This was something that we did quite successfully at Uber and it was a total asset. A cultural belief of ours was that every hire should 'raise the bar' as compared to the last. The idea being that if you do that you will only hire the best and never settle. This of course is aspirational, but with the right technique you can at least mitigate the settling part. How we did this at Uber was to have someone from a totally separate team participate in the process. They had no horse in the race. They were there only as a neutral participate in the process. They had their own session similar to the hiring managers. It was to feel out what drove the candidate. What were their motivations? Were they going to raise the bar at Uber? 
+
+The other responsibility for the Bar Raiser was to drive the debrief which we will get to later. What you need to know now was they didn't have any real power to say yes. On the contrary, they only had the ability to say no. If they felt that the hire would not raise the overall talent bar, then they could say no and that was final. This was mainly to guard against a desperate hire where a manager just needed someone to have a butt in a seat.
+
+### Recap
+
+The onsite interview looks something like this so far:
+
+1. Coding & Debugging
+2. Systems Architecture
+3. Algorithms
+4. Lunch with team
+5. Hiring manager
+6. Bar Raiser
+
+## Debrief
+
+So after all of this you've had a number of people on your team, and not on your team, meet the candidate to see if they will be a solid addition to the team. Now it's time to make a decision. The best way to do this is to _not have anyone talk about the results of the process_. You don't want to introduce any bias into the system. No participant in the interview process should talk about the performance until everyone sits down in a room for the specific purpose of the debrief. What happens otherwise is you will introduce some bias between interviewers. As an example one interviewer might have been super impressed with the candidate during their session which might bias their friend, who did another panel, into submitting a slightly higher score than they would have otherwise. Let's say it just moved them from being a single thumbs down into being a single thumbs up. You want to avoid this so that during the debrief you get as raw of an impression as possible, then you hash that out.
+
+One of the more successful processes I've seen is you get all of the participants into a room and start off with a thumbs up / thumbs down. Two thumbs down is an absolutely not. Two thumbs up is a top 5-10% of candidates ever. We need to hire this person. Once everyone reveals their position you talk about the notes that everyone's taken on the interview and have everyone justify their decision.
+
+Something that is interesting is, at Uber, the debrief process is driven by the Bar Raiser. They are the MC of the debrief and make sure that there is no bias and the interview panel was ernest in their questioning of the candidate. They are the 'poll watchers' of the process.
+
+## Summary
+So far this is what we got:
+
+1. Technical Phone screen
+2. Onsite
+   1. Coding & Debugging
+   2. Systems Architecture
+   3. Algorithms
+   4. Lunch with team
+   5. Hiring manager
+   6. Bar Raiser
+3. Debrief
+
+This accomplishes most of the goals we set out towards:
+
+- Respectful of team’s time
+- Respectful of the candidate’s time
+- Determines the technical capabilities of the candidate
+- Gauge the experience of the candidate
+- Judge if the candidate is a good cultural fit
+- Is consistent while scaling
+- Correlates as closely as possible with day to day work performance
+
+We minimize the cost of time spent both by the candidate and the team on figuring out if there is a mutual fit early. We determine their technical capabilities in a few dimensions ranging from practical to academic. We were able to gauge their experience with blocks of architecture as well as working on a team. We broke bread with the candidate and got a feel for what motivates them. The process scales linearly. However, the toughest one to nail is correlating this process to day to day performance. I still haven't seen a perfect test of this short of contracting with the candidate for the better part of a week, but that breaks the goal of minimizing the time invested for the team and for the candidate.
+
+I still do believe that with this framework you get enough discrete signal in enough dimensions to make a judgement call on whether or not the candidate will be a good performer on the work they will be doing day to day. Even better than more realistic work in some ways since you will be able to concretely measure how they perform in the different dimensions (like great at coding but not so great at algorithms).
+
+Another factor to think about is don't worry about making the process too hard. Some places hae a process that strings out a candidate for a month plus culminating in an acceptance period where the candidate must decide yes or no in a 24 hour window. This can actually add value as it's almost a form of hazing or initiation. Everyone has 'earned' their spot at the company and will feel more included because of it. More similar than not to some super selective secret organization.
+
+Anyways, like I said. Hiring is hard. Let me know what you think. What are great hiring experiences that you've been a part of?

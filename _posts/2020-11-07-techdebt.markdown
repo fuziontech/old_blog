@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Tech Debt"
+date: 2020-11-06T15:21:32-08:00
+categories: techdebt ramblings
+draft: true
+---
+
+I think my favorite anecdote is at ATG this one aspiring staff engineer was looking to build this new glorious message passing layer to communicate with the autonomous cars named VAPI for vehicle api. Complete blank slate, green field project. The engineer spent forever speccing out the perfect solution. 2 years later he was on v2.0 of an api that never shipped where nginx could have easily been used with some modification. Or even better we could have iterated on the api we ended up using as a stop gap (overseer).
+
+Tech debt does have to get paid down, but I view it more as something you pay down after learning. We definitely made engineering decisions actively trying to avoid tech debt as an excuse or factor. Resulting in many greenfield services getting built. Or doing the same because a team just calls tech debt bankruptcy and decides to build fresh. Generally it was a bad experience.
