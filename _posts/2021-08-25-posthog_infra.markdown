@@ -176,3 +176,4 @@ draft: false
         1.  ClickHouse Operator
         2.  ClickHouse Copier
         3.  ClickHouse Backup
+15. **Automated upgrades** - for self-hosted (Jams mentioned this in the past). Currently upgrades are manual, which leaves many self hosted folks running old versions of PostHog (basically install once, upgrade never pattern) and they just don't get the cool new stuff we built nor any of the perf improvements. Jams also mentioned that some other company had the same problem & perhaps we could have a PostHog operator, that fetches updates and applies them.
